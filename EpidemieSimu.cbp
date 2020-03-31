@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="EpidemieSimu" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/EpidemieSimu" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/EpidemieSimu" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=c++14" />
+			<Add directory="../../Bibliothèque/SFML-2.5.1/include" />
+		</Compiler>
+		<Linker>
+			<Add library="sfml-graphics" />
+			<Add library="sfml-window" />
+			<Add library="sfml-system" />
+			<Add directory="../../Bibliothèque/SFML-2.5.1/lib" />
+		</Linker>
+		<Unit filename="Cursor.cpp" />
+		<Unit filename="Cursor.h" />
+		<Unit filename="TextBox.cpp" />
+		<Unit filename="TextBox.h" />
+		<Unit filename="TextureLoader.cpp" />
+		<Unit filename="TextureLoader.h" />
+		<Unit filename="community.cpp" />
+		<Unit filename="community.h" />
+		<Unit filename="dataGraphic4u.cpp" />
+		<Unit filename="dataGraphic4u.h" />
+		<Unit filename="dataResistantVirus.cpp" />
+		<Unit filename="dataResistantVirus.h" />
+		<Unit filename="graphic.cpp" />
+		<Unit filename="graphic.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="menu.cpp" />
+		<Unit filename="menu.h" />
+		<Unit filename="myDrawable.cpp" />
+		<Unit filename="myDrawable.h" />
+		<Unit filename="person.cpp" />
+		<Unit filename="person.h" />
+		<Unit filename="utile.cpp" />
+		<Unit filename="utile.h" />
+		<Unit filename="virus.cpp" />
+		<Unit filename="virus.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
