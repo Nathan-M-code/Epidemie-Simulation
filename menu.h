@@ -3,6 +3,7 @@
 
 #include "myDrawable.h"
 #include "Cursor.h"
+#include "CursorFloat.h"
 #include "virus.h"
 #include "community.h"
 #include "TextBox.h"
@@ -36,6 +37,7 @@ private:
 
     std::vector<Cursor *> _listCursor;
     TextBox *_tb;
+    CursorFloat *_cursorFloat;
 };
 
 #endif // MENU_H_INCLUDED

@@ -26,6 +26,7 @@ Menu::Menu(int x, int y, unsigned width, unsigned height) : MyDrawable(x,y,width
     _tb = new TextBox(_x+_width/4-50,_y+230,"NameVirus");
 
     _listCursor.push_back(new Cursor(_x+3*_width/4-60,_y+50,120,30,2,600)); //nbPerson
+    _cursorFloat = new CursorFloat(_x+3*_width/4-60,_y+100,120,30,0,30); //speed person
 
 
 }
@@ -34,6 +35,7 @@ Menu::~Menu(){
         delete _listCursor[i];
     }
     delete _tb;
+    delete _cursorFloat;
 }
 void Menu::setPositionByButtonMove(sf::Vector2i &mousePos){
     MyDrawable::setPositionByButtonMove(mousePos);
@@ -48,6 +50,7 @@ void Menu::setPositionByButtonMove(sf::Vector2i &mousePos){
     _tb->setPos(sf::Vector2f(_x+_width/4-50,_y+230));
 
     _listCursor[4]->setPosition(_x+3*_width/4-60,_y+50);
+    _cursorFloat->setPosition(_x+3*_width/4-60,_y+100);
 }
 void Menu::scaleByButtonScale(sf::Vector2i &mousePos){
     MyDrawable::scaleByButtonScale(mousePos);
@@ -62,19 +65,32 @@ void Menu::scaleByButtonScale(sf::Vector2i &mousePos){
     _tb->setPos(sf::Vector2f(_x+_width/4-50,_y+230));
 
     _listCursor[4]->setPosition(_x+3*_width/4-60,_y+50);
+    _cursorFloat->setPosition(_x+3*_width/4-60,_y+100);
 }
 
 void Menu::clickNonButton(bool pressed, sf::Vector2i &mousePos){
     for(unsigned i=0;i<_listCursor.size();i++){
-        if(_listCursor[i]->mouseIsOnCursor(mousePos)){
-            if(pressed){
+        if(pressed){
+            if(_listCursor[i]->mouseIsOnCursor(mousePos)){
                 _listCursor[i]->setActivated(true);
             }
-        }
-        if(!pressed){
+        }else{
             _listCursor[i]->setActivated(false);
         }
     }
+
+    if(pressed){
+        if(_cursorFloat->mouseIsOnCursor(mousePos)){
+            _cursorFloat->setActivated(true);
+        }
+    }else{
+        _cursorFloat->setActivated(false);
+    }
+
+    if(!pressed){
+
+    }
+
     if(pressed){
         if(_tb->testClick(mousePos.x, mousePos.y)){
             _tb->setFocus(true);
@@ -103,6 +119,9 @@ void Menu::handlerMouseMotion(sf::Vector2i &mousePos){
             _listCursor[i]->setValue(mousePos);
         }
     }
+    if(_cursorFloat->isActivated()){
+        _cursorFloat->setValue(mousePos);
+    }
 }
 
 bool Menu::mouseIsOnNewVirus(sf::Vector2i &mousePos){
@@ -126,7 +145,7 @@ Virus* Menu::getNewVirus(){
     return new Virus(_tb->getString(), _listCursor[0]->getValue()/100.0, _listCursor[1]->getValue()/100.0,_listCursor[2]->getValue(), _listCursor[3]->getValue());
 }
 Community* Menu::getNewCommunity(){
-    return new Community(_listCursor[4]->getValue());
+    return new Community(_listCursor[4]->getValue(),_cursorFloat->getValue());
 }
 
 void Menu::draw(sf::RenderWindow &window){
@@ -170,9 +189,14 @@ void Menu::draw(sf::RenderWindow &window){
     _text.setPosition(_listCursor[4]->getPosition().x+_listCursor[4]->getSize().x/2-_text.getLocalBounds().width/2,_listCursor[4]->getPosition().y-_text.getLocalBounds().height);
     window.draw(_text);
 
+    _text.setString("Speed person");
+    _text.setPosition(_cursorFloat->getPosition().x+_cursorFloat->getSize().x/2-_text.getLocalBounds().width/2,_cursorFloat->getPosition().y-_text.getLocalBounds().height);
+    window.draw(_text);
+
     for(unsigned i=0;i<_listCursor.size();i++){
         _listCursor[i]->draw(window);
     }
+    _cursorFloat->draw(window);
 
     window.draw(_spriteMove);
     window.draw(_spriteScale);

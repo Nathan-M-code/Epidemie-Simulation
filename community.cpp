@@ -5,7 +5,7 @@ using namespace std;
 Community::Community(int x, int y, unsigned width, unsigned height) : MyDrawable(x,y,width,height,150,100){
     _nbPerson = 200;
     for(unsigned i=0;i<_nbPerson;i++)
-        _listPerson.push_back(new Person(_x,_y,_width,_height));
+        _listPerson.push_back(new Person(_x,_y,_width,_height, 1));
 
     sf::Texture *texture = TextureLoader::getTextureGraphe();
     sf::Vector2u size = texture->getSize();
@@ -18,10 +18,10 @@ Community::Community(int x, int y, unsigned width, unsigned height) : MyDrawable
     _virusDisplayed = 0;
 }
 
-Community::Community(unsigned nbPerson) : MyDrawable(0,0,400,400,150,100){
+Community::Community(unsigned nbPerson, float speedPerson) : MyDrawable(0,0,400,400,150,100){
     _nbPerson = nbPerson;
     for(unsigned i=0;i<_nbPerson;i++)
-        _listPerson.push_back(new Person(_x,_y,_width,_height));
+        _listPerson.push_back(new Person(_x,_y,_width,_height,speedPerson));
 
     sf::Texture *texture = TextureLoader::getTextureGraphe();
     sf::Vector2u size = texture->getSize();

@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Person::Person(int xmin, int ymin, int width, int height){
+Person::Person(int xmin, int ymin, int width, int height, float speed){
     _age = rand_a_b(1,100);
     _dead = false;
 
@@ -11,7 +11,7 @@ Person::Person(int xmin, int ymin, int width, int height){
     _xmax = xmin+width;
     _ymax = ymin+height;
 
-    _speed = 0.8;
+    _speed = speed;
 
     _radius = 5;
     int x = rand_a_b(_xmin,_xmax+1-_radius*2);

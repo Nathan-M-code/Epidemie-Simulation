@@ -530,7 +530,7 @@
 	"graphic.h"
 	"menu.h"
 
-1585668373 source:c:\users\natha\desktop\dev\dev c++\epidemiesimu\community.cpp
+1585739208 source:c:\users\natha\desktop\dev\dev c++\epidemiesimu\community.cpp
 	"community.h"
 
 1585668114 source:c:\users\natha\desktop\dev\dev c++\epidemiesimu\virus.cpp
@@ -539,14 +539,14 @@
 1585668040 c:\users\natha\desktop\dev\dev c++\epidemiesimu\virus.h
 	"myDrawable.h"
 
-1585597177 source:c:\users\natha\desktop\dev\dev c++\epidemiesimu\person.cpp
+1585739190 source:c:\users\natha\desktop\dev\dev c++\epidemiesimu\person.cpp
 	"person.h"
 
-1585596016 c:\users\natha\desktop\dev\dev c++\epidemiesimu\person.h
+1585739182 c:\users\natha\desktop\dev\dev c++\epidemiesimu\person.h
 	"virus.h"
 	"dataResistantVirus.h"
 
-1585668337 c:\users\natha\desktop\dev\dev c++\epidemiesimu\community.h
+1585739145 c:\users\natha\desktop\dev\dev c++\epidemiesimu\community.h
 	"person.h"
 	"dataGraphic4u.h"
 	"myDrawable.h"
@@ -583,12 +583,13 @@
 1585648195 source:c:\users\natha\desktop\dev\dev c++\epidemiesimu\mydrawable.cpp
 	"myDrawable.h"
 
-1585671267 source:c:\users\natha\desktop\dev\dev c++\epidemiesimu\menu.cpp
+1585739101 source:c:\users\natha\desktop\dev\dev c++\epidemiesimu\menu.cpp
 	"menu.h"
 
-1585670985 c:\users\natha\desktop\dev\dev c++\epidemiesimu\menu.h
+1585738848 c:\users\natha\desktop\dev\dev c++\epidemiesimu\menu.h
 	"myDrawable.h"
 	"Cursor.h"
+	"CursorFloat.h"
 	"virus.h"
 	"community.h"
 	"TextBox.h"
@@ -596,7 +597,7 @@
 1585670009 c:\users\natha\desktop\dev\dev c++\epidemiesimu\cursor.h
 	"TextureLoader.h"
 
-1585667418 source:c:\users\natha\desktop\dev\dev c++\epidemiesimu\cursor.cpp
+1585673428 source:c:\users\natha\desktop\dev\dev c++\epidemiesimu\cursor.cpp
 	"Cursor.h"
 
 1585669817 c:\users\natha\desktop\dev\dev c++\epidemiesimu\textbox.h
@@ -604,4 +605,10 @@
 
 1585670341 source:c:\users\natha\desktop\dev\dev c++\epidemiesimu\textbox.cpp
 	"TextBox.h"
+
+1585738575 c:\users\natha\desktop\dev\dev c++\epidemiesimu\cursorfloat.h
+	"TextureLoader.h"
+
+1585738761 source:c:\users\natha\desktop\dev\dev c++\epidemiesimu\cursorfloat.cpp
+	"CursorFloat.h"
 

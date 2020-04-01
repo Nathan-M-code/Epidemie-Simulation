@@ -41,6 +41,8 @@
 		</Linker>
 		<Unit filename="Cursor.cpp" />
 		<Unit filename="Cursor.h" />
+		<Unit filename="CursorFloat.cpp" />
+		<Unit filename="CursorFloat.h" />
 		<Unit filename="TextBox.cpp" />
 		<Unit filename="TextBox.h" />
 		<Unit filename="TextureLoader.cpp" />

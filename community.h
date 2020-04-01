@@ -9,7 +9,7 @@
 class Community : public MyDrawable{
 public:
     Community(int x, int y, unsigned width, unsigned height);
-    Community(unsigned nbPerson);
+    Community(unsigned nbPerson, float speedPerson);
     ~Community();
 
     bool mouseIsOnGraph(sf::Vector2i &mousePos);

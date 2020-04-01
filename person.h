@@ -6,7 +6,7 @@
 
 class Person{
 public:
-    Person(int xmin, int ymin, int width, int height);
+    Person(int xmin, int ymin, int width, int height, float speed);
     ~Person();
 
     sf::Vector2f getPos();
